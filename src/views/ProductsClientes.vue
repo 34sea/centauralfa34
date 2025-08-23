@@ -30,7 +30,6 @@
       <button class="close-btn" @click="fullscreenImage = null">✖</button>
       <div class="frontLogo"></div>
       <img :src="fullscreenImage" alt="Fullscreen" />
-      <!-- <img src="src/assets/clients/" alt=""> -->
     </div>
   </div>
 </template>
@@ -42,14 +41,12 @@ const categories = ["Todos", "Dark", "Light", "Colorido", "Copo", "Parede", "Cam
 const selectedCategory = ref("Todos");
 
 const images = ref([
-  
-  { src: "src/assets/clients/logo-ligth.png", category: "Light" },
-  { src: "src/assets/clients/logo-dark.png", category: "Dark" },
-  { src: "src/assets/clients/logo-colorido.png", category: "Colorido" },
-  { src: "src/assets/clients/logo-in-cup.png", category: "Copo" },
-  { src: "src/assets/clients/logo-in-wall.png", category: "Parede" },
-  { src: "src/assets/clients/logo-tshirt.png", category: "Camisa" },
-  { src: "/public/centaur-logo.png", category: "Camisa" },
+  { src: new URL('@/assets/clients/logo-light.png', import.meta.url).href, category: "Light" },
+  { src: new URL('@/assets/clients/logo-dark.png', import.meta.url).href, category: "Dark" },
+  { src: new URL('@/assets/clients/logo-colorido.png', import.meta.url).href, category: "Colorido" },
+  { src: new URL('@/assets/clients/logo-in-cup.png', import.meta.url).href, category: "Copo" },
+  { src: new URL('@/assets/clients/logo-in-wall.png', import.meta.url).href, category: "Parede" },
+  { src: new URL('@/assets/clients/logo-tshirt.png', import.meta.url).href, category: "Camisa" },
 ]);
 
 const filteredImages = computed(() => {
