@@ -37,16 +37,23 @@
 <script setup>
 import { ref, computed } from "vue";
 
+import logoLight from '../assets/clients/logo-ligth.png';
+import logoDark from "../assets/clients/logo-dark.png";
+import logoColorido from "../assets/clients/logo-colorido.png";
+import logoCup from "../assets/clients/logo-in-cup.png";
+import logoWall from "../assets/clients/logo-in-wall.png";
+import logoTshirt from "../assets/clients/logo-tshirt.png";
+
 const categories = ["Todos", "Dark", "Light", "Colorido", "Copo", "Parede", "Camisa"];
 const selectedCategory = ref("Todos");
 
 const images = ref([
-  { src: new URL('@/assets/clients/logo-light.png', import.meta.url).href, category: "Light" },
-  { src: new URL('@/assets/clients/logo-dark.png', import.meta.url).href, category: "Dark" },
-  { src: new URL('@/assets/clients/logo-colorido.png', import.meta.url).href, category: "Colorido" },
-  { src: new URL('@/assets/clients/logo-in-cup.png', import.meta.url).href, category: "Copo" },
-  { src: new URL('@/assets/clients/logo-in-wall.png', import.meta.url).href, category: "Parede" },
-  { src: new URL('@/assets/clients/logo-tshirt.png', import.meta.url).href, category: "Camisa" },
+  { src: logoLight, category: "Light" },
+  { src: logoDark, category: "Dark" },
+  { src: logoColorido, category: "Colorido" },
+  { src: logoCup, category: "Copo" },
+  { src: logoWall, category: "Parede" },
+  { src: logoTshirt, category: "Camisa" },
 ]);
 
 const filteredImages = computed(() => {
