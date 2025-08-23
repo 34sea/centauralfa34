@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div v-if="$route.path !== '/login' && $route.path !== '/sigup' && $route.path !== '/dclient' && $route.path !== '/teste'" class="header">
+    <div v-if="$route.path !== '/' && $route.path !== '/items' && $route.path !== '/login' && $route.path !== '/sigup' && $route.path !== '/dclient'" class="header">
       <nav>
         <div class="logoMarca">
           <img src="/public/centaur-logo.png" alt="logo" />

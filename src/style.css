@@ -1306,3 +1306,17 @@ background-color: var(--maincolor);
   justify-content: center;
 }
 
+
+@media (max-width: 500px) {
+ /*Login screen*/
+.loginForm form{
+  width: 100%;
+  min-height: 40px;
+  border: 0px solid black;
+  box-shadow: none;
+  padding: 40px 40px;
+  border-radius: 10px;
+  background-color: #fff;
+  position: relative;
+}
+}

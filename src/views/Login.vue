@@ -5,8 +5,8 @@ import { collection, getDocs, query, where } from "firebase/firestore";
 import { ref } from "vue";
 
 const route = useRouter();
-const email = ref("")
-const password = ref("")
+const email = ref("mercy")
+const password = ref("12345")
 const usuarios = ref()
 const changeRouter = ref(false)
 const changeLoader = ref(true)
@@ -28,31 +28,37 @@ console.log(`changeRouter: ${changeRouter.value}`)
 
 
 const buscarUsuarios = async () => {
-    changeLoader.value = false
-   try {
-        const q = query(
-            collection(db, "usermartelclient"),
-            where("email", "==", email.value),
-            where("password", "==", password.value)
-        );
-
-        const querySnapshot = await getDocs(q);
-        if (!querySnapshot.empty) {
-            usuarios.value = querySnapshot.docs.map((doc) => ({
-                id: doc.id,
-                ...doc.data(),
-            }));
-             localStorage.setItem("usermartelclientelogin", usuarios.value[0].id);
-             changeLoader.value = true
-             route.push("/dash")
-        } else {
-            console.log("Credenciais Invalidas")
-            changeLoader.value = true
-        }
-    } catch (e) {
-        console.error("Erro", e)
-        changeLoader.value = true
+    console.log("Login")
+    if(email.value==='mercy' && password.value=='12345'){
+        route.push("/items")
+    }else{
+        alert("Senha ou user errado")
     }
+//     changeLoader.value = false
+//    try {
+//         const q = query(
+//             collection(db, "usermartelclient"),
+//             where("email", "==", email.value),
+//             where("password", "==", password.value)
+//         );
+
+//         const querySnapshot = await getDocs(q);
+//         if (!querySnapshot.empty) {
+//             usuarios.value = querySnapshot.docs.map((doc) => ({
+//                 id: doc.id,
+//                 ...doc.data(),
+//             }));
+//              localStorage.setItem("usermartelclientelogin", usuarios.value[0].id);
+//              changeLoader.value = true
+//              route.push("/dash")
+//         } else {
+//             console.log("Credenciais Invalidas")
+//             changeLoader.value = true
+//         }
+//     } catch (e) {
+//         console.error("Erro", e)
+//         changeLoader.value = true
+//     }
 };
 
 
@@ -72,7 +78,8 @@ const buscarUsuarios = async () => {
                 Preencha com suas credenciais
             </h4>
             <div class="formsIn">
-                <input type="email" name="email" id="email" placeholder="Email" v-model="email">
+                <!-- <input type="email" name="email" id="email" placeholder="Email" v-model="email"> -->
+                 <input type="text" name="email" id="email" placeholder="Nome" v-model="email">
                 <input type="password" name="pass" id="pass" placeholder="Senha" v-model="password">
             </div>
             <div class="labelS">
