@@ -16,7 +16,7 @@ import DatasUser from './views/Client/DatasUser.vue';
 import settingsuser from './views/Client/settingsuser.vue';
 
 const routes = [
-  { path: '/', component: Login },
+  { path: '/', component: ProductsClientes },
   { path: '/about', component: About },
   { path: '/login', component: Login },
   { path: '/sigup', component: Sigup },

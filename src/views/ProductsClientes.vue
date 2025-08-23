@@ -49,6 +49,7 @@ const images = ref([
   { src: "src/assets/clients/logo-in-cup.png", category: "Copo" },
   { src: "src/assets/clients/logo-in-wall.png", category: "Parede" },
   { src: "src/assets/clients/logo-tshirt.png", category: "Camisa" },
+  { src: "/public/centaur-logo.png", category: "Camisa" },
 ]);
 
 const filteredImages = computed(() => {
