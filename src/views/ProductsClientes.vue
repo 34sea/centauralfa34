@@ -30,6 +30,7 @@
       <button class="close-btn" @click="fullscreenImage = null">✖</button>
       <div class="frontLogo"></div>
       <img :src="fullscreenImage" alt="Fullscreen" />
+      <!-- <img src="src/assets/clients/" alt=""> -->
     </div>
   </div>
 </template>
@@ -42,12 +43,12 @@ const selectedCategory = ref("Todos");
 
 const images = ref([
   
-  { src: "/public/clients/logo-ligth.png", category: "Light" },
-  { src: "/public/clients/logo-dark.png", category: "Dark" },
-  { src: "/public/clients/logo-colorido.png", category: "Colorido" },
-  { src: "/public/clients/logo-in-cup.png", category: "Copo" },
-  { src: "/public/clients/logo-in-wall.png", category: "Parede" },
-  { src: "/public/clients/logo-tshirt.png", category: "Camisa" },
+  { src: "src/assets/clients/logo-ligth.png", category: "Light" },
+  { src: "src/assets/clients/logo-dark.png", category: "Dark" },
+  { src: "src/assets/clients/logo-colorido.png", category: "Colorido" },
+  { src: "src/assets/clients/logo-in-cup.png", category: "Copo" },
+  { src: "src/assets/clients/logo-in-wall.png", category: "Parede" },
+  { src: "src/assets/clients/logo-tshirt.png", category: "Camisa" },
 ]);
 
 const filteredImages = computed(() => {
