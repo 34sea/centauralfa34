@@ -43,17 +43,23 @@ import logoColorido from "../assets/clients/logo-colorido.png";
 import logoCup from "../assets/clients/logo-in-cup.png";
 import logoWall from "../assets/clients/logo-in-wall.png";
 import logoTshirt from "../assets/clients/logo-tshirt.png";
+import logov3 from '../assets/clients/logov3.png'
+import logov2 from '../assets/clients/logov2.png'
+import logov1 from '../assets/clients/logov1.png'
 
 const categories = ["Todos", "Dark", "Light", "Colorido", "Copo", "Parede", "Camisa"];
 const selectedCategory = ref("Todos");
 
 const images = ref([
-  { src: logoLight, category: "Light" },
-  { src: logoDark, category: "Dark" },
-  { src: logoColorido, category: "Colorido" },
-  { src: logoCup, category: "Copo" },
-  { src: logoWall, category: "Parede" },
-  { src: logoTshirt, category: "Camisa" },
+  // { src: logoLight, category: "Light" },
+  // { src: logoDark, category: "Dark" },
+  { src: logov3, category: "Colorido" },
+  { src: logov2, category: "Colorido" },
+  { src: logov1, category: "Colorido" },
+  // { src: logoColorido, category: "Colorido" },
+  // { src: logoCup, category: "Copo" },
+  // { src: logoWall, category: "Parede" },
+  // { src: logoTshirt, category: "Camisa" },
 ]);
 
 const filteredImages = computed(() => {
