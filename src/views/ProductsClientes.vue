@@ -53,9 +53,9 @@ const selectedCategory = ref("Todos");
 const images = ref([
   // { src: logoLight, category: "Light" },
   // { src: logoDark, category: "Dark" },
-  { src: logov1, category: "Colorido" },
-  { src: logov3, category: "Colorido" },
-  { src: logov2, category: "Colorido" },
+  // { src: logov1, category: "Colorido" },
+  // { src: logov3, category: "Colorido" },
+  // { src: logov2, category: "Colorido" },
   
   // { src: logoColorido, category: "Colorido" },
   // { src: logoCup, category: "Copo" },
