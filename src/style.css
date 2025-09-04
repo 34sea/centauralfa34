@@ -80,7 +80,7 @@ ul li{
 .header nav .linksMenu a{
   margin-left: 1rem;
   text-transform: capitalize;
-  font-weight: 510;
+  font-weight: 550;
 }
 .header nav .linksMenu a:first-child{
   margin-left: 0px;
