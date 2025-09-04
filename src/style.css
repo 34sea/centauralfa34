@@ -4,9 +4,13 @@
   box-sizing: border-box;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Roboto", sans-serif;
+  /* font-family: 'Poppins', sans-serif; */
   /* font-family: "Lato", serif; */
+  /* font-family: "Montserrat", sans-serif; */
+  font-optical-sizing: auto;
   overflow-x: hidden;
 }
 
@@ -16,11 +20,12 @@ ul li{
 
 /*Cores*/
 :root{
-  --maincolor: #229af1;
+  --maincolor: #0069d2;
+  /* --maincolor: #229af1; */
   --secmaincolor: #004aad;
-  --maincoloralpha: #229bf18f;
+  --maincoloralpha: #229bf1bb;
   --secundarycolor: #fff;
-  --thirdcolor: #ecf2f0;
+  --thirdcolor: #eef7ff;
   --linkcolor: #555;
   --linkcolorRed: #FF5555;
   --linkcolorRedAlph: #FF9999;
@@ -51,6 +56,7 @@ ul li{
   background-color: var(--secundarycolor);
   padding: 30px 50px;
   border: 0px solid black;
+  /* border-bottom: 1px solid #ccc; */
 }
 .header nav{
   width: 100%;
@@ -58,6 +64,7 @@ ul li{
   align-items: center;
   justify-content: space-between;
   border: 0px solid black;
+  
   
 }
 
@@ -71,8 +78,9 @@ ul li{
 }
 
 .header nav .linksMenu a{
-  margin-left: 15px;
+  margin-left: 1rem;
   text-transform: capitalize;
+  font-weight: 510;
 }
 .header nav .linksMenu a:first-child{
   margin-left: 0px;
@@ -92,11 +100,15 @@ ul li{
 }
 
 .header nav .counteBtns a:last-child{
-  background-color: var(--maincolor);
-  padding: 10px 25px;
-  border-radius: 40px;
+  /* background-color: var(--maincolor); */
+  /* background: linear-gradient(to right, var(--maincolor), var(--maincoloralpha)); */
+  background: linear-gradient(135deg, #0069d2 0%, #004a95c2 90%, #004a95 100%);
+  padding: 8px 20px;
+  border-radius: 15px;
   color: var(--secundarycolor);
   margin-right: 0px;
+  border: 1px solid var(--maincolor);
+  box-shadow: rgba(51, 153, 255, 0.5) 0px 1px 0px inset, rgba(0, 77, 153, 0.4) 0px -1px 0px 1px inset, rgba(9, 11, 11, 0.1) 0px 2px 4px 0px;
 }
 
 .banner{
@@ -126,11 +138,13 @@ ul li{
   font-weight: 550;
   color: #333;
   text-transform: capitalize;
+  line-height: 45px;
 }
 
 .banner .texto p{
   font-size: 15px;
   margin: 15px 0px;
+  line-height: 25px;
   color: var(--linkcolor);
 }
 
@@ -138,11 +152,12 @@ ul li{
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--maincolor);
-  
-  width: 120px;
-  height: 40px;
-  border-radius: 40px;
+  background: linear-gradient(135deg, #0069d2 0%, #004a95c2 90%, #004a95 100%);
+  box-shadow: rgba(51, 153, 255, 0.5) 0px 1px 0px inset, rgba(0, 77, 153, 0.4) 0px -1px 0px 1px inset, rgba(9, 11, 11, 0.1) 0px 2px 4px 0px;
+  width: 100px;
+  height: 35px;
+  border-radius: 15px;
+  border: 1px solid var(--maincolor);
   color: var(--secundarycolor);
   margin-right: 0px;
   text-decoration: none;
@@ -156,6 +171,7 @@ ul li{
   display: flex;
   align-items: center;
   justify-content: center;
+  
 }
 .logoMarca img{
   width: auto;
